@@ -1,0 +1,33 @@
+body {
+  background-color: #121f3d;
+  color: white;
+}
+
+button {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  color: #121f3d;
+  font-weight: 700;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.Sparkles {
+  font-size: 2rem;
+}
+
+.Adder {
+  background-color: #98ca3f;
+}
