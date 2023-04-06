@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { REMOVE_SPARKLE } from "../actions/types";
-import { GeneralContext } from "../context/generalContex";
+import { useGeneralDispatch } from "../context/generalContex";
+import { memo } from "react";
 
-export default function Remover() {
-  const { dispatch } = useContext(GeneralContext);
+function Remover() {
+  const { removeSparkle } = useGeneralDispatch();
 
   const handleOnclick = () => {
-    dispatch({ type: REMOVE_SPARKLE });
+    removeSparkle();
   };
 
   console.log("Render Remover...");
@@ -17,3 +16,5 @@ export default function Remover() {
     </button>
   );
 }
+
+export default memo(Remover);

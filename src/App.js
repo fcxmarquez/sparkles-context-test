@@ -1,6 +1,7 @@
 import Sparkles from "./components/Sparkles";
 import Adder from "./components/Adder";
 import Remover from "./components/Remover";
+import { DummyButton } from "./components/DummyButton";
 import "./styles.css";
 
 export default function App() {
@@ -13,6 +14,9 @@ export default function App() {
       <section>
         <Adder />
         <Remover />
+      </section>
+      <section>
+        <DummyButton />
       </section>
     </div>
   );

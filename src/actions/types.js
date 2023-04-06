@@ -1,2 +1,3 @@
 export const ADD_SPARKLE = "ADD_SPARKLES";
 export const REMOVE_SPARKLE = "REMOVE_SPARKLE";
+export const DUMMY_ACTION = "DUMMY_ACTION";

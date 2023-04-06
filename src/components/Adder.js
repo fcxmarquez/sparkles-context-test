@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { ADD_SPARKLE } from "../actions/types";
-import { GeneralContext } from "../context/generalContex";
+import { useGeneralDispatch } from "../context/generalContex";
+import { memo } from "react";
 
-export default function Adder() {
-  const { dispatch } = useContext(GeneralContext);
+function Adder() {
+  const { addSparkle } = useGeneralDispatch();
   const handleOnclick = () => {
-    dispatch({ type: ADD_SPARKLE });
+    addSparkle();
   };
 
   console.log("Render Adder...");
@@ -16,3 +15,5 @@ export default function Adder() {
     </button>
   );
 }
+
+export default memo(Adder);

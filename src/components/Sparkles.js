@@ -1,12 +1,14 @@
-import { useContext } from "react";
-import { GeneralContext } from "../context/generalContex";
+import { useGeneralContext } from "../context/generalContex";
+import { memo } from "react";
 
-export default function Sparkles() {
-  const { state } = useContext(GeneralContext);
-  const counter = state.sparkles;
+function Sparkles() {
+  const { sparkles } = useGeneralContext();
+  const counter = sparkles;
   const sparklesArray = Array(counter).fill("✨");
 
   console.log("Render sparkles...");
 
   return <p className="Sparkles">{sparklesArray.join(" ")}</p>;
 }
+
+export default memo(Sparkles);
