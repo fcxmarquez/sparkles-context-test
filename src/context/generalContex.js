@@ -18,12 +18,12 @@ export const GeneralProvider = ({ children }) => {
 };
 
 export const useGeneralContext = () => {
-  const context = useContext(GeneralContext);
-  if (context === undefined) {
+  const [state] = useContext(GeneralContext);
+  if (state === undefined) {
     throw new Error("useGeneralContext must be used within a GeneralProvider");
   }
 
-  const { sparkles } = context[0];
+  const { sparkles } = state;
 
   return { sparkles };
 };

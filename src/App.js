@@ -5,6 +5,8 @@ import { DummyButton } from "./components/DummyButton";
 import "./styles.css";
 
 export default function App() {
+  console.log("Render App...")
+
   return (
     <div className="App">
       <h1>Context vs. Redux</h1>
